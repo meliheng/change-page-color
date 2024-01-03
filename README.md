@@ -1,16 +1,29 @@
-# studycase
-
-A new Flutter project.
-
+# Change Screen Color
 ## Getting Started
+This project is a created for a study case. When textfield value length equals 4, page color changes with random color.
+## Installation
 
-This project is a starting point for a Flutter application.
+1. Clone the repository:
 
+    `
+git clone https://github.com/meliheng/movieapp.git
+    `
+
+
+2. Load the dependencies:
+
+    `
+flutter pub get
+    `
+
+44. Open an emulator and run the project:
+    
+    `
+    flutter run
+    `
+## Screeenshots
 A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- ![First page](assets/ss1.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- ![Second page](assets/ss2.png)
