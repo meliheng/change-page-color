@@ -24,6 +24,5 @@ flutter pub get
 ## Screeenshots
 A few resources to get you started if this is your first Flutter project:
 
-- ![First page](assets/ss1.png)
-
-- ![Second page](assets/ss2.png)
+<img src="assets/ss1.png" alt="drawing" style="width:200px;" alt='First page'/>
+<img src="assets/ss2.png" alt="drawing" style="width:200px;" alt='First page'/>
