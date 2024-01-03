@@ -7,20 +7,16 @@ import 'package:studycase/bloc/page_state.dart';
 import 'package:studycase/screen/page2.dart';
 
 class PageBloc extends Bloc<PageEvent, PageState> {
-  PageBloc()
-      : super(
-          PageState(pageColor: Colors.white),
-        ) {
+  PageBloc() : super(PageState.initial()) {
     on<ChangeColor>(_changeColorEvent);
     on<NavigateScreen>(_navigateScreen);
   }
 
   void _changeColorEvent(ChangeColor event, Emitter<PageState> emit) {
-    if (event.input.length == 4) {
-      final color = Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
-          .withOpacity(1.0);
-      emit(state.copyWith(pageColor: color));
-    }
+    final color =
+        Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0);
+    state.pageColor = color;
+    emit(state.copyWith());
   }
 
   void _navigateScreen(NavigateScreen event, Emitter<PageState> emit) {
@@ -30,5 +26,12 @@ class PageBloc extends Bloc<PageEvent, PageState> {
         builder: (context) => const Page2(),
       ),
     );
+  }
+
+  void changeTextFieldValue(String value) {
+    state.value = value;
+    if (state.value.length == 4) {
+      add(ChangeColor());
+    }
   }
 }

@@ -12,7 +12,6 @@ class Page1 extends StatefulWidget {
 }
 
 class _Page1State extends State<Page1> {
-  final TextEditingController controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<PageBloc, PageState>(
@@ -28,7 +27,7 @@ class _Page1State extends State<Page1> {
                   width: 300,
                   child: TextField(
                     onChanged: (value) {
-                      context.read<PageBloc>().add(ChangeColor(input: value));
+                      context.read<PageBloc>().changeTextFieldValue(value);
                     },
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
